@@ -81,7 +81,7 @@ textarea {
 
 /* Button */
 button {
-    background-color: rgba(218, 173, 39, 0.326);
+    background-color: rgba(218, 39, 152, 0.326);
     color: white;
     border:none;
     padding:12px 20px;
@@ -89,6 +89,10 @@ button {
     cursor:pointer;
     transition: 0.3s;
     font-size: 1rem;
+}
+
+button:hover {
+    background-color: #2d527f;
 }
 
 
