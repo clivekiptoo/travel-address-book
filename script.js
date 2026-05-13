@@ -43,3 +43,6 @@ const place1 = new place("Mombasa", "Fort Jesus", "December");
 place.prototype.placeSummary = function() {
     return this.location + " - " + this.landmark;
 };
+
+// Test
+console.log(place1.placeSummary());
