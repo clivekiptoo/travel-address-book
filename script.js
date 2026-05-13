@@ -1,48 +1,82 @@
-// ADDRESs BOOK
+document.addEventListener("DOMContentLoaded", function () {
 
-// Constructor
-function Contact(firstName, lastName, phoneNumber) {
+  
+  // GET ELEMENTS 
+  
+  const contactForm = document.getElementById("contact-form");
+  const contactList = document.getElementById("contacts-lists");
+
+  const placeForm = document.getElementById("place-form");
+  const placeList = document.getElementById("places-list");
+
+  
+  // ADDRESS BOOK
+  
+  function Contact(firstName, lastName, phoneNumber) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.phoneNumber = phoneNumber;
-} 
+  }
 
-const contact1 = new Contact("Brian", "Otieno", "0712345678")
-
-// console.log(contact1);
-
-// Prototype
-Contact.prototype.fullName = function() {
+  Contact.prototype.fullName = function () {
     return this.firstName + " " + this.lastName;
-};
+  };
 
+  // STORE CONTACTS
+  let contacts = [];
 
-// Test
-// console.log(contact1.fullName());
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
+    const firstName = document.getElementById("first-name").value;
+    const lastName = document.getElementById("last-name").value;
+    const phone = document.getElementById("phone-number").value;
 
+    const newContact = new Contact(firstName, lastName, phone);
 
-// PLACES YOU'VE BEEN
+    contacts.push(newContact);
 
-// Constructor
-function place(location, season, landmark) {
+    // DISPLAY IN HTML
+    const li = document.createElement("li");
+    li.textContent = newContact.fullName();
+
+    contactList.appendChild(li);
+
+    contactForm.reset();
+  });
+
+  
+  // PLACES YOU'VE BEEN
+  
+  function Place(location, season, landmark) {
     this.location = location;
     this.season = season;
     this.landmark = landmark;
-}
+  }
 
-// Test
-const place1 = new place("Mombasa", "Fort Jesus", "December");
-
-// console.log(place1);
-
-
-
-// Prototype Method
-
-place.prototype.placeSummary = function() {
+  Place.prototype.placeSummary = function () {
     return this.location + " - " + this.landmark;
-};
+  };
 
-// Test
-console.log(place1.placeSummary());
+  let places = [];
+
+  placeForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const location = document.getElementById("location").value;
+    const season = document.getElementById("season").value;
+    const landmark = document.getElementById("landmark").value;
+
+    const newPlace = new Place(location, season, landmark);
+
+    places.push(newPlace);
+
+    const li = document.createElement("li");
+    li.textContent = newPlace.placeSummary();
+
+    placeList.appendChild(li);
+
+    placeForm.reset();
+  });
+
+});
