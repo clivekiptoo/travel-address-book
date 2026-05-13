@@ -31,5 +31,8 @@ function place(location, season, landmark) {
     this.landmark = landmark;
 }
 
+// Test
+const place1 = new place("Mombasa", "Fort Jesus", "December");
 
+console.log(place1);
 
