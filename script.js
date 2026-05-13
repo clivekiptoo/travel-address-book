@@ -18,5 +18,18 @@ Contact.prototype.fullName = function() {
 
 
 // Test
-console.log(contact1.fullName());
+// console.log(contact1.fullName());
+
+
+
+// PLACES YOU'VE BEEN
+
+// Constructor
+function place(location, season, landmark) {
+    this.location = location;
+    this.season = season;
+    this.landmark = landmark;
+}
+
+
 
