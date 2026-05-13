@@ -9,7 +9,7 @@
 body {
     font-family:Arial, Helvetica, sans-serif;
     background-color:antiquewhite;
-    color#333;
+    color:#333;
 }
 
 /* Navbar */
@@ -32,3 +32,18 @@ nav {
 .nav-links a:hover {
     color: #c8dff;
 }
+
+/* Page Container*/
+.page-container {
+    width:90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+
+
+
