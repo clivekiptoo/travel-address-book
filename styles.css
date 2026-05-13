@@ -79,7 +79,17 @@ textarea {
     resize: vertical;
 }
 
-
+/* Button */
+button {
+    background-color: rgba(218, 173, 39, 0.326);
+    color: white;
+    border:none;
+    padding:12px 20px;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+}
 
 
 
