@@ -95,6 +95,18 @@ button:hover {
     background-color: #2d527f;
 }
 
+/* Lists */
+li {
+    background-color: #eef3f8;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
 
 
 
