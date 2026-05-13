@@ -7,7 +7,7 @@ function Contact(firstName, lastName, phoneNumber) {
     this.phoneNumber = phoneNumber;
 } 
 
-// const contact1 = new Contact("Brian", "Otieno", "0712345678")
+const contact1 = new Contact("Brian", "Otieno", "0712345678")
 
 // console.log(contact1);
 
@@ -34,5 +34,12 @@ function place(location, season, landmark) {
 // Test
 const place1 = new place("Mombasa", "Fort Jesus", "December");
 
-console.log(place1);
+// console.log(place1);
 
+
+
+// Prototype Method
+
+place.prototype.placeSummary = function() {
+    return this.location + " - " + this.landmark;
+};
